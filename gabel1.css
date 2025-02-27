@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.fork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Gabelkopf */
+.head {
+    width: 20px;
+    height: 30px;
+    background: black;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+}
+
+/* Gabelzinken */
+.head::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: white;
+    left: 25%;
+    box-shadow: 8px 0 white, 16px 0 white;
+}
+
+/* Gabelstiel mit Animation */
+.handle {
+    width: 10px;
+    height: 50px;
+    background: black;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Animations-Keyframes für wachsenden Stiel */
+@keyframes growHandle {
+    from { height: 50px; }
+    to { height: 200px; }
+}
+
+.handle.growing {
+    animation: growHandle 2s forwards;
+}
