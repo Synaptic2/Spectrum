@@ -6,22 +6,24 @@ body {
 }
 
 .teletext-container {
+    max-width: 90%;
     width: 600px;
     margin: 20px auto;
     padding: 20px;
     background-color: #0000AA;
     border: 4px solid #FFFF00;
+    box-sizing: border-box;
 }
 
 .teletext-header {
-    font-size: 20px;
+    font-size: 5vw;
     background-color: #FF0000;
     padding: 10px;
     color: white;
 }
 
 .teletext-content {
-    font-size: 16px;
+    font-size: 4vw;
     margin-top: 10px;
     white-space: pre-line;
     text-align: left;
@@ -30,4 +32,18 @@ body {
 
 .teletext-input {
     margin-top: 15px;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .teletext-container {
+        width: 95%;
+        padding: 10px;
+    }
+    .teletext-header {
+        font-size: 6vw;
+    }
+    .teletext-content {
+        font-size: 5vw;
+    }
 }
