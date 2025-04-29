@@ -6,76 +6,128 @@
   <title>Website im Aufbau</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #e0f2ff, #ffffff);
+      color: #333;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .text-section {
+      max-width: 600px;
     }
 
     h1 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      color: #333;
+    }
+
+    .highlight {
+      background: yellow;
+      padding: 0 5px;
     }
 
     p {
       font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      color: #555;
+      margin-bottom: 2rem;
     }
 
-    a.button {
-      display: inline-block;
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .button-main, .button-secondary {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      border: none;
       border-radius: 4px;
-      background-color: #007BFF;
-      color: white;
       text-decoration: none;
-      cursor: pointer;
-      margin-top: 1rem;
+      text-align: center;
     }
 
-    a.button:hover {
+    .button-main {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .button-main:hover {
       background-color: #0056b3;
     }
 
-    .info {
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #777;
-    }
-
-    a.project-link {
+    .button-secondary {
+      background-color: transparent;
       color: #007BFF;
-      text-decoration: none;
+      border: 2px solid #007BFF;
     }
 
-    a.project-link:hover {
-      text-decoration: underline;
+    .button-secondary:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .image-section {
+      margin-left: 3rem;
+    }
+
+    .image-section img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-  <h1>Hier entsteht etwas Neues!</h1>
-  <p>Wir arbeiten mit Hochdruck an unserer neuen Website. Schauen Sie bald wieder vorbei, um die Entwicklungen zu sehen!</p>
-  <p>Wenn Sie Interesse an unseren Projekten haben, können Sie uns direkt eine Nachricht senden:</p>
+<header>
+  <div class="logo">Synapticer2</div>
+</header>
 
-  <a href="mailto:synapticer2@gmail.com?subject=Interesse%20an%20Synaptic2&body=Hey,%20ich%20habe%20Interesse%20an%20euren%20Projekten,%20lass%20mich%20wissen,%20wenn%20es%20News%20gibt.%20Vielen%20Dank.%20Ein..." class="button">
-    Jetzt Interesse senden
-  </a>
-
-  <div class="info">
-    Ein neues Projekte ist bereits erreichbar: <a href="https://www.barrierefreiesnetz.com" target="_blank" class="project-link">www.barrierefreiesnetz.com</a>
+<div class="content">
+  <div class="text-section">
+    <h1>Hier entsteht ein <span class="highlight">neues Projekt</span>!</h1>
+    <p>Wir arbeiten intensiv daran. Bleiben Sie informiert und senden Sie uns Ihr Interesse!</p>
+    <div class="buttons">
+      <a href="mailto:synapticer2@gmail.com?subject=Interesse%20an%20Synaptic2&body=Hey,%20ich%20habe%20Interesse%20an%20euren%20Projekten,%20lass%20mich%20wissen,%20wenn%20es%20News%20gibt.%20Vielen%20Dank.%20Ein..." class="button-main">Jetzt Interesse senden</a>
+      <a href="https://www.barrierefreiesnetz.com" target="_blank" class="button-secondary">Mehr erfahren</a>
+    </div>
   </div>
+  <div class="image-section">
+    <img src="https://via.placeholder.com/400x300" alt="Platzhalterbild">
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Synapticer2. Alle Rechte vorbehalten.
+</footer>
 
 </body>
 </html>
