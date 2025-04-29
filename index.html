@@ -30,32 +30,20 @@
       color: #555;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    input[type="email"] {
-      padding: 0.5rem;
-      font-size: 1rem;
-      width: 250px;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      padding: 0.5rem 1rem;
+    a.button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
       border: none;
       border-radius: 4px;
       background-color: #007BFF;
       color: white;
+      text-decoration: none;
       cursor: pointer;
+      margin-top: 1rem;
     }
 
-    button:hover {
+    a.button:hover {
       background-color: #0056b3;
     }
 
@@ -65,12 +53,12 @@
       color: #777;
     }
 
-    a {
+    a.project-link {
       color: #007BFF;
       text-decoration: none;
     }
 
-    a:hover {
+    a.project-link:hover {
       text-decoration: underline;
     }
   </style>
@@ -79,15 +67,14 @@
 
   <h1>Hier entsteht etwas Neues!</h1>
   <p>Wir arbeiten mit Hochdruck an unserer neuen Website. Schauen Sie bald wieder vorbei, um die Entwicklungen zu sehen!</p>
-  <p>Wenn Sie automatisch benachrichtigt werden möchten, sobald es Neuigkeiten gibt, tragen Sie sich einfach hier ein:</p>
+  <p>Wenn Sie Interesse an unseren Projekten haben, können Sie uns direkt eine Nachricht senden:</p>
 
-  <form action="https://formsubmit.co/synapticer2@gmail.com" method="POST">
-    <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
-    <button type="submit">Benachrichtigung aktivieren</button>
-  </form>
+  <a href="mailto:synapticer2@gmail.com?subject=Interesse%20an%20Synaptic2&body=Hey,%20ich%20habe%20Interesse%20an%20euren%20Projekten,%20lass%20mich%20wissen,%20wenn%20es%20News%20gibt.%20Vielen%20Dank.%20Ein..." class="button">
+    Jetzt Interesse senden
+  </a>
 
   <div class="info">
-    Unser neues Projekt ist bereits erreichbar: <a href="https://www.barrierefreiesnetz.com" target="_blank">www.barrierefreiesnetz.com</a>
+    Ein neues Projekte ist bereits erreichbar: <a href="https://www.barrierefreiesnetz.com" target="_blank" class="project-link">www.barrierefreiesnetz.com</a>
   </div>
 
 </body>
