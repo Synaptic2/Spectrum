@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     header {
@@ -34,6 +35,7 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      gap: 3rem;
     }
 
     .text-section {
@@ -66,6 +68,7 @@
       border-radius: 4px;
       text-decoration: none;
       text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .button-main {
@@ -88,13 +91,19 @@
       color: white;
     }
 
-    .image-section {
-      margin-left: 3rem;
-    }
-
     .image-section img {
       max-width: 400px;
       width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards ease-out;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     footer {
@@ -108,7 +117,7 @@
 <body>
 
 <header>
-  <div class="logo">Synaptic2</div>
+  <div class="logo">Synapticer2</div>
 </header>
 
 <div class="content">
@@ -117,16 +126,17 @@
     <p>Wir arbeiten intensiv daran. Bleiben Sie informiert und senden Sie uns Ihr Interesse!</p>
     <div class="buttons">
       <a href="mailto:synapticer2@gmail.com?subject=Interesse%20an%20Synaptic2&body=Hey,%20ich%20habe%20Interesse%20an%20euren%20Projekten,%20lass%20mich%20wissen,%20wenn%20es%20News%20gibt.%20Vielen%20Dank.%20Ein..." class="button-main">Jetzt Interesse senden</a>
-      <a href="https://www.barrierefreiesnetz.com" target="_blank" class="button-secondary">Neues Projekt</a>
+      <a href="https://www.barrierefreiesnetz.com" target="_blank" class="button-secondary">Mehr erfahren</a>
     </div>
   </div>
+
   <div class="image-section">
-    <img src="https://via.placeholder.com/400x300" alt="Platzhalterbild">
+    <img src="A_website_placeholder_image_features_a_German_anno.png" alt="Mensch-Computer Synapse" loading="lazy">
   </div>
 </div>
 
 <footer>
-  &copy; 2025 Synaptic2. Alle Rechte vorbehalten.
+  &copy; 2025 Synapticer2. Alle Rechte vorbehalten.
 </footer>
 
 </body>
